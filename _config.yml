@@ -26,7 +26,7 @@ description: >- # this means to ignore newlines until "baseurl:"
     *Improving the detection and interpretation of potentially causal disease-associated variants from genome-wide association studies
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: @anshulkundaje
+twitter_username: anshulkundaje
 github_username:  kundajelab
 
 # Build settings
