@@ -17,8 +17,8 @@ title: Kundaje Lab Official Blog
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Our research focusses on development of statistical and machine learning methods for integrative analysis of diverse functional genomic and genetic data to learn models of gene regulation. We have led the analysis efforts of the Encyclopedia of DNA Elements (ENCODE) and The Roadmap Epigenomics Projects with the development of novel methods for
-list:@
-    :Denoising and normalization of large-scale functional genomic data
+
+    : Denoising and normalization of large-scale functional genomic data
     : Dissecting combinatorial transcription factor co-occupancy within and across cell-types
     : Predicting cell-type specific enhancers from chromatin state profiles
     : Modeling 3D genome architecture and predicting cell-type specific enhancer-promoter interactions
