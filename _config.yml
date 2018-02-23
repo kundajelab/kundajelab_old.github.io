@@ -13,16 +13,21 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
+title: Kundaje Lab Official Blog
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Our research focusses on development of statistical and machine learning methods for integrative analysis of diverse functional genomic and genetic data to learn models of gene regulation. We have led the analysis efforts of the Encyclopedia of DNA Elements (ENCODE) and The Roadmap Epigenomics Projects with the development of novel methods for
+
+    * Denoising and normalization of large-scale functional genomic data
+    * Dissecting combinatorial transcription factor co-occupancy within and across cell-types
+    * Predicting cell-type specific enhancers from chromatin state profiles
+    * Modeling 3D genome architecture and predicting cell-type specific enhancer-promoter interactions
+    *Learning transcriptional regulatory networks that integrate proximal and distal cis and trans signals.
+    *Improving the detection and interpretation of potentially causal disease-associated variants from genome-wide association studies
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: @anshulkundaje
+github_username:  kundajelab
 
 # Build settings
 markdown: kramdown
