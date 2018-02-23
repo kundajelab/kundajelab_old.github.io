@@ -7,8 +7,8 @@ paginate:     1
 
 # About/contact
 author:
-  name:       Kundaje Lab
-    url:        https://github.com/kundajelab
+  name:      Kundaje Lab
+   url:      https://github.com/kundajelab
 
 # Gems
 gems:
@@ -18,4 +18,4 @@ gems:
 markdown: kramdown
 
 # include subdirectories
-keep_files: ["_site/html/"]
+#keep_files: ["_site/html/"]
