@@ -234,6 +234,9 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-feed (~> 0.6)
+  jekyll-theme-hacker
+  tzinfo-data
 
 BUNDLED WITH
    1.11.2

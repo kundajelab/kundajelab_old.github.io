@@ -14,7 +14,6 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Kundaje Lab Official Blog
-email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Our research focusses on development of statistical and machine learning methods for integrative analysis of diverse functional genomic and genetic data to learn models of gene regulation. We have led the analysis efforts of the Encyclopedia of DNA Elements (ENCODE) and The Roadmap Epigenomics Projects.
   
@@ -25,8 +24,8 @@ github_username:  kundajelab
 
 # Build settings
 markdown: kramdown
-theme: minima
-
+#theme: minima
+theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
 
