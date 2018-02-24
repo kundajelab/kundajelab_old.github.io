@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Kundaje Lab Official Blog</title>
+        <description>Our research focusses on development of statistical and machine learning methods for integrative analysis of diverse functional genomic and genetic data to learn models of gene regulation. We have led the analysis efforts of the Encyclopedia of DNA Elements (ENCODE) and The Roadmap Epigenomics Projects.</description>
+        <link>http://localhost:4000/</link>
+        <atom:link href="http://localhost:4000/feed.xml" rel="self"
+        type="application/rss+xml"/>
+        <pubDate>Sat, 24 Feb 2018 10:14:29 -0800</pubDate>
+        <lastBuildDate>Sat, 24 Feb 2018 10:14:29 -0800</lastBuildDate>
+        <generator>Jekyll v3.6.2</generator>
+        
+        <item>
+            <title>Our First Post</title>
+            <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+            <pubDate>Fri, 23 Feb 2018 12:41:05 -0800</pubDate>
+            <link>http://localhost:4000#/jekyll/update/2018/02/23/first-post.html</link>
+            <guid isPermaLink="true">http://localhost:4000#/jekyll/update/2018/02/23/first-post.html</guid>
+            
+            
+            <category>jekyll</category>
+            
+            <category>update</category>
+            
+        </item>
+        
+        <item>
+            <title>Distill Test</title>
+            <description>&lt;!doctype html&gt;
+&lt;meta charset=&quot;utf8&quot;&gt;
+&lt;script src=&quot;//d3js.org/d3.v3.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://distill.pub/template.v1.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css&quot; integrity=&quot;sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0&quot; crossorigin=&quot;anonymous&quot;&gt;
+
+&lt;script type=&quot;text/front-matter&quot;&gt;
+  title: Article Title
+  published: Jan 10, 2017
+  authors:
+  - Chris Olah:
+  - Shan Carter: http://shancarter.com
+  affiliations:
+  - Google Brain:
+  - Google Brain: http://g.co/brain
+&lt;/script&gt;
+
+&lt;dt-article&gt;
+  &lt;script type=&quot;text/article&quot;&gt;&lt;/script&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+  &lt;h2&gt;A description of the article&lt;/h2&gt;
+  &lt;dt-byline&gt;&lt;/dt-byline&gt;
+  &lt;p&gt;This is the first paragraph of the article. Test a long&amp;thinsp;&amp;mdash;&amp;thinsp;dash -- here it is.&lt;/p&gt;
+  &lt;p&gt;Test for owner's possessive. Test for &quot;quoting a passage.&quot; And another sentence. Or two.&lt;/p&gt;
+  &lt;p&gt;Here's a test of an inline equation &lt;dt-math&gt;c = a^2 + b^2&lt;/dt-math&gt;.&lt;/p&gt;
+  &lt;dt-math block&gt;c = \pm\sqrt{a^2 + b^2}&lt;/dt-math&gt;
+  &lt;p&gt;We can also cite &lt;dt-cite key=&quot;gregor2015draw,mercier2011humans&quot;&gt;&lt;/dt-cite&gt; external publications. &lt;dt-cite key=&quot;dong2014image,dumoulin2016guide,mordvintsev2015inceptionism&quot;&gt;&lt;/dt-cite&gt; We should also be testing footnotes&lt;dt-fn&gt;This will become a hoverable footnote.&lt;/dt-fn&gt;.&lt;/p&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;&lt;th&gt;First&lt;/th&gt;&lt;th&gt;Second&lt;/th&gt;&lt;th&gt;Third&lt;/th&gt;&lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;654&lt;/td&gt;&lt;td&gt;23&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;14&lt;/td&gt;&lt;td&gt;54&lt;/td&gt;&lt;td&gt;34&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;234&lt;/td&gt;&lt;td&gt;54&lt;/td&gt;&lt;td&gt;23&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+  &lt;p&gt;Here's a javascript code block.&lt;/p&gt;
+  &lt;dt-code block language=&quot;javascript&quot;&gt;
+    var x = 25;
+    function(x){
+      return x * x;
+    }
+  &lt;/dt-code&gt;
+  &lt;p&gt;We also support python.&lt;/p&gt;
+  &lt;dt-code block language=&quot;python&quot;&gt;
+    # Python 3: Fibonacci series up to n
+      def fib(n):
+        a, b = 0, 1
+          while a &lt; n:
+            print(a, end=' ')
+            a, b = b, a+b
+  &lt;/dt-code&gt;
+&lt;/dt-article&gt;
+
+&lt;script type=&quot;text/bibliography&quot;&gt;
+  @article{gregor2015draw,
+    title={DRAW: A recurrent neural network for image generation},
+    author={Gregor, Karol and Danihelka, Ivo and Graves, Alex and Rezende, Danilo Jimenez and Wierstra, Daan},
+    journal={arXiv preprint arXiv:1502.04623},
+    year={2015},
+    url ={https://arxiv.org/pdf/1502.04623.pdf}
+  }
+  @article{mercier2011humans,
+    title={Why do humans reason? Arguments for an argumentative theory},
+    author={Mercier, Hugo and Sperber, Dan},
+    journal={Behavioral and brain sciences},
+    volume={34},
+    number={02},
+    pages={57--74},
+    year={2011},
+    publisher={Cambridge Univ Press},
+    doi={10.1017/S0140525X10000968}
+  }
+
+  @article{dong2014image,
+    title={Image super-resolution using deep convolutional networks},
+    author={Dong, Chao and Loy, Chen Change and He, Kaiming and Tang, Xiaoou},
+    journal={arXiv preprint arXiv:1501.00092},
+    year={2014},
+    url={https://arxiv.org/pdf/1501.00092.pdf}
+  }
+
+  @article{dumoulin2016adversarially,
+    title={Adversarially Learned Inference},
+    author={Dumoulin, Vincent and Belghazi, Ishmael and Poole, Ben and Lamb, Alex and Arjovsky, Martin and Mastropietro, Olivier and Courville, Aaron},
+    journal={arXiv preprint arXiv:1606.00704},
+    year={2016},
+    url={https://arxiv.org/pdf/1606.00704.pdf}
+  }
+
+  @article{dumoulin2016guide,
+    title={A guide to convolution arithmetic for deep learning},
+    author={Dumoulin, Vincent and Visin, Francesco},
+    journal={arXiv preprint arXiv:1603.07285},
+    year={2016},
+    url={https://arxiv.org/pdf/1603.07285.pdf}
+  }
+
+  @article{donahue2016adversarial,
+    title={Adversarial Feature Learning},
+    author={Donahue, Jeff and Kr{\&quot;a}henb{\&quot;u}hl, Philipp and Darrell, Trevor},
+    journal={arXiv preprint arXiv:1605.09782},
+    year={2016},
+    url={https://arxiv.org/pdf/1605.09782.pdf}
+  }
+
+  @article{gauthier2014conditional,
+    title={Conditional generative adversarial nets for convolutional face generation},
+    author={Gauthier, Jon},
+    journal={Class Project for Stanford CS231N: Convolutional Neural Networks for Visual Recognition, Winter semester},
+    volume={2014},
+    year={2014},
+    url={http://www.foldl.me/uploads/papers/tr-cgans.pdf}
+  }
+
+  @article{henaff2015geodesics,
+    title={Geodesics of learned representations},
+    author={H{\'e}naff, Olivier J and Simoncelli, Eero P},
+    journal={arXiv preprint arXiv:1511.06394},
+    year={2015},
+    url={https://arxiv.org/pdf/1511.06394.pdf}
+  }
+
+  @article{johnson2016perceptual,
+    title={Perceptual losses for real-time style transfer and super-resolution},
+    author={Johnson, Justin and Alahi, Alexandre and Fei-Fei, Li},
+    journal={arXiv preprint arXiv:1603.08155},
+    year={2016},
+    url={https://arxiv.org/pdf/1603.08155.pdf}
+  }
+
+  @article{mordvintsev2015inceptionism,
+    title={Inceptionism: Going deeper into neural networks},
+    author={Mordvintsev, Alexander and Olah, Christopher and Tyka, Mike},
+    journal={Google Research Blog},
+    year={2015},
+    url={https://research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html}
+  }
+
+  @misc{mordvintsev2016deepdreaming,
+    title={DeepDreaming with TensorFlow},
+    author={Mordvintsev, Alexander},
+    year={2016},
+    url={https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/tutorials/deepdream/deepdream.ipynb},
+  }
+
+  @article{radford2015unsupervised,
+    title={Unsupervised representation learning with deep convolutional generative adversarial networks},
+    author={Radford, Alec and Metz, Luke and Chintala, Soumith},
+    journal={arXiv preprint arXiv:1511.06434},
+    year={2015},
+    url={https://arxiv.org/pdf/1511.06434.pdf}
+  }
+
+  @inproceedings{salimans2016improved,
+    title={Improved techniques for training gans},
+    author={Salimans, Tim and Goodfellow, Ian and Zaremba, Wojciech and Cheung, Vicki and Radford, Alec and Chen, Xi},
+    booktitle={Advances in Neural Information Processing Systems},
+    pages={2226--2234},
+    year={2016},
+    url={https://arxiv.org/pdf/1606.03498.pdf}
+  }
+
+  @article{shi2016deconvolution,
+    title={Is the deconvolution layer the same as a convolutional layer?},
+    author={Shi, Wenzhe and Caballero, Jose and Theis, Lucas and Huszar, Ferenc and Aitken, Andrew and Ledig, Christian and Wang, Zehan},
+    journal={arXiv preprint arXiv:1609.07009},
+    year={2016},
+    url={https://arxiv.org/pdf/1609.07009.pdf}
+  }
+
+  @inproceedings{shi2016real,
+    title={Real-time single image and video super-resolution using an efficient sub-pixel convolutional neural network},
+    author={Shi, Wenzhe and Caballero, Jose and Husz{\'a}r, Ferenc and Totz, Johannes and Aitken, Andrew P and Bishop, Rob and Rueckert, Daniel and Wang, Zehan},
+    booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+    pages={1874--1883},
+    year={2016},
+    url={https://arxiv.org/pdf/1609.05158.pdf},
+    doi={10.1109/cvpr.2016.207}
+  }
+
+&lt;/script&gt;
+&lt;dt-appendix&gt;
+  &lt;h3&gt;Contributions&lt;/h3&gt;
+  &lt;p&gt;List of who did what&lt;/p&gt;
+&lt;/dt-appendix&gt;
+</description>
+            <pubDate>Fri, 23 Feb 2018 00:00:00 -0800</pubDate>
+            <link>http://localhost:4000#/2018/02/23/distill-test.html</link>
+            <guid isPermaLink="true">http://localhost:4000#/2018/02/23/distill-test.html</guid>
+            
+            
+        </item>
+        
+    </channel>
+</rss>
