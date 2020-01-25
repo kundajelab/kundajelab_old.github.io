@@ -2,7 +2,14 @@
 layout: post
 title:  "Kubernetes Jobs on GCP "
 date:   2020-01-24 23:02:47 -0800
-categories: GCP technical
+categories: Programming
 ---
 
-Hello, testing
+# Install gcloud on your laptop/ sherlock/ lab cluster 
+
+```
+curl https://sdk.cloud.google.com | bash
+exec -l $SHELL
+gcloud init 
+```
+
