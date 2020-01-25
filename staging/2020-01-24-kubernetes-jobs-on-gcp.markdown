@@ -79,10 +79,22 @@ kubectl create clusterrolebinding cluster-admin-binding \
    --user=annashch@stanford.edu
 ```
 
+Make sure kubectl is pointing to the cluster you just created: 
+
+```
+gcloud container clusters get-credentials spades --zone us-central1-b
+```
+
 # Create a helm chart for the cluster 
 
 
 # Create and populate GCP storage bucket 
+
+```
+gsutil mb -l us-central1-b gs://keratinocytes/
+```
+Copy local files into your bucket: 
+
 
 ## Verify that the bucket can be mounted locally with gcsfuse 
 First, obtain a json key file for mounting the bucket 
