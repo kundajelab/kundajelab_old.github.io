@@ -34,6 +34,7 @@ plugins:
 exclude:
   - README.md
   - staging/
+  - images/
   - Gemfile
   - Gemfile.lock
   - node_modules
