@@ -48,8 +48,24 @@ A stand-alone installer is also available, but not recommended for GCP clusters:
 https://kubernetes.io/docs/tasks/tools/install-kubectl/
 
 ## install gcsfuse for mounting gcp buckets 
+```
+RUN apt-get update && apt-get install --yes --no-install-recommends \
+    ca-certificates \
+    curl \
+    gnupg \
+    && echo "deb http://packages.cloud.google.com/apt $GCSFUSE_REPO main" | tee /etc/apt/sources.list.d/gcsfuse.list \
+    && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - \
+    && apt-get update \
+    && apt-get install gcsfuse -y \
+    && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
+```
 
-## install helm to create job templates 
+Create a service account for mounting the bucket: 
+https://console.cloud.google.com/iam-admin/serviceaccounts?project=gbsc-gcp-lab-kundaje
+(replace 'gbsc-gcp-lab-kundaje' with the relevant project id) 
+
+Create a service account, and download a key in json form. 
+
 
 ## install docker 
 
