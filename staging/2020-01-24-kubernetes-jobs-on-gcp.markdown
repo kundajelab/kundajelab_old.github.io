@@ -114,8 +114,13 @@ First, obtain a json key file for mounting the bucket
 
 
 ![go_to_service_account](https://github.com/kundajelab/kundajelab.github.io/blob/master/images/2020-01-24-kubernetes-jobs-on-gcp/service_account_gcp.png?raw=true)
+
+
 ![create_key](https://github.com/kundajelab/kundajelab.github.io/blob/master/images/2020-01-24-kubernetes-jobs-on-gcp/create_key.png?raw=true)
+
+
 ![create_key2](https://github.com/kundajelab/kundajelab.github.io/blob/master/images/2020-01-24-kubernetes-jobs-on-gcp/create_key2.png?raw=true)
+
 
 ```
 gcsfuse --key-file /etc/key.json --implicit-dirs  -o allow_other keratinocytes /mnt/data
