@@ -34,7 +34,7 @@ gcloud config list
 If the proper project is not selected, you can change it: 
 
 ```
-gcloud cnofig projects list
+gcloud config projects list
 gcloud config set project "my-project"
 ```
 ## install kube 
