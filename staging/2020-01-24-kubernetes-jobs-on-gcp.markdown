@@ -12,7 +12,7 @@ This tutorial explains how to run a batch of compute jobs on the Google Compute 
 
 For the purposes of this tutorial, we will perform the task of running the SPAdes genomic assembler on a number of genomic (fastq) source files. 
 
-# Install the needed prerequistes: 
+# Install the needed prerequisites: 
 
 ## Install gcloud and gsutil
 ```
