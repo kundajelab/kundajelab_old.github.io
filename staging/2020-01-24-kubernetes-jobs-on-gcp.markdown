@@ -314,8 +314,23 @@ spec:
   backoffLimit: 1
 ```
 Let's break down what we have specified in the yaml file: 
-
-
+* metadata.name -- the name of the job (spades1) 
+* spec (outer) is the specification of the Job:  
+    * ttlSecondsAfterFinished -- cleans up resources for finished jobs within 30 seconds after they are complete 
+    * template -- template for the Pod that will execute the Job 
+    * backOfLimit -- number of times to try running the Job before giving up 
+* Pod template: 
+    * spec (inner) is the specification of the Pod
+    * restartPolicy -- the Pod will be restarted if it fails (and the backOfLimit is not yet exceeded) 
+* spec (inner) is the specification of hte Pod: 
+    * container -- this is a virtual image for running the job 
+        * image -- this is the docker image we pushed to dockerhub (make sure this image is set to Public on Dockerhub) 
+        * resources -- requested and maximum CPUs and RAM resources for the job 
+        * securityContext -- run the job with admin privileges in the docker container (this is needed for mounting buckets with gcsfuse)
+    * command -- command to execute in the Job 
+    * args -- arguments passed to the command 
+    
+    
 Submit the job as follows: 
 
 ```
