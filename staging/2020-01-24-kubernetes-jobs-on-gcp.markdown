@@ -101,9 +101,6 @@ Make sure kubectl is pointing to the cluster you just created:
 gcloud container clusters get-credentials spades --zone us-central1-b
 ```
 
-# Create a helm chart for the cluster 
-
-
 # Create and populate GCP storage bucket 
 
 ```
@@ -114,6 +111,12 @@ Copy local files into your bucket:
 
 ## Verify that the bucket can be mounted locally with gcsfuse 
 First, obtain a json key file for mounting the bucket 
+
+
+![go_to_service_account](https://github.com/kundajelab/kundajelab.github.io/blob/master/images/2020-01-24-kubernetes-jobs-on-gcp/service_account_gcp.png?raw=true)
+![create_key](https://github.com/kundajelab/kundajelab.github.io/blob/master/images/2020-01-24-kubernetes-jobs-on-gcp/create_key.png?raw=true)
+![create_key2](https://github.com/kundajelab/kundajelab.github.io/blob/master/images/2020-01-24-kubernetes-jobs-on-gcp/create_key2.png?raw=true)
+
 ```
 gcsfuse --key-file /etc/key.json --implicit-dirs  -o allow_other keratinocytes /mnt/data
 ```
