@@ -358,21 +358,7 @@ Parallelism:    1
 Completions:    1
 Start Time:     Sat, 25 Jan 2020 03:16:44 -0800
 Pods Statuses:  1 Running / 0 Succeeded / 0 Failed
-Pod Template:
-  Labels:  controller-uid=059cc91e-0e02-4ecd-89aa-3d347c55579e
-           job-name=spades
-  Containers:
-   spades:
-    Image:      kundajelab/spades_gcp:latest
-    Port:       <none>
-    Host Port:  <none>
-    Command:
-      /opt/script.sh
-      keratinocytes-0.5d-rep1
-    Environment:  <none>
-    Mounts:       <none>
-  Volumes:        <none>
-Events:           <none>
+...
 ```
 And same for a pod: 
 ```
@@ -389,45 +375,7 @@ Labels:         controller-uid=059cc91e-0e02-4ecd-89aa-3d347c55579e
                 job-name=spades
 Annotations:    kubernetes.io/limit-ranger: LimitRanger plugin set: cpu request for container spades
 Status:         Running
-IP:             10.32.0.16
-IPs:            <none>
-Controlled By:  Job/spades
-Containers:
-  spades:
-    Container ID:  docker://3fcd4d0ba692d6d5ab0bb73ef173af094deb2901fc9e619ef6d2e74f65f4a8f4
-    Image:         kundajelab/spades_gcp:latest
-    Image ID:      docker-pullable://kundajelab/spades_gcp@sha256:a2f214a93ffeebc65d40e1edfcaff552f5b42d12b71ec4d5abb59adb51176adf
-    Port:          <none>
-    Host Port:     <none>
-    Command:
-      /opt/script.sh
-      keratinocytes-0.5d-rep1
-    State:          Running
-      Started:      Sat, 25 Jan 2020 03:16:52 -0800
-    Ready:          True
-    Restart Count:  0
-    Requests:
-      cpu:        100m
-    Environment:  <none>
-    Mounts:
-      /var/run/secrets/kubernetes.io/serviceaccount from default-token-hn2rr (ro)
-Conditions:
-  Type              Status
-  Initialized       True 
-  Ready             True 
-  ContainersReady   True 
-  PodScheduled      True 
-Volumes:
-  default-token-hn2rr:
-    Type:        Secret (a volume populated by a Secret)
-    SecretName:  default-token-hn2rr
-    Optional:    false
-QoS Class:       Burstable
-Node-Selectors:  <none>
-Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
-                 node.kubernetes.io/unreachable:NoExecute for 300s
-Events:          <none>
-
+...
 ```
 Use the "logs" command to view a pod's logs. 
 
@@ -443,117 +391,82 @@ Mounting file system...
 File system has been successfully mounted.
 mount successful
 running spades
-
-
-== Warning ==  output dir is not empty! Please, clean output directory before run.
-
-
-
-
-== Warning ==  No assembly mode was sepcified! If you intend to assemble high-coverage multi-cell/isolate data, use '--isolate' option.
-
-
-Command line: /opt/SPAdes-3.14.0-Linux/bin/spades.py	--pe1-1	/mnt/data/keratinocytes-0.5d-rep1.end1.trimmed.fastq.gz	--pe1-2	/mnt/data/keratinocytes-0.5d-rep1.end2.trimmed.fastq.gz	-t	20	-o	/mnt/data/SPAdes-3.14-keratinocytes-0.5d-rep1	
-
-System information:
-  SPAdes version: 3.14.0
-  Python version: 2.7.17
-  OS: Linux-4.19.76+-x86_64-with-Ubuntu-18.04-bionic
-
-Output dir: /mnt/data/SPAdes-3.14-keratinocytes-0.5d-rep1
-Mode: read error correction and assembling
-Debug mode is turned OFF
-
-Dataset parameters:
-  Standard mode
-  For multi-cell/isolate data we recommend to use '--isolate' option; for single-cell MDA data use '--sc'; for metagenomic data use '--meta'; for RNA-Seq use '--rna'.
-  Reads:
-    Library number: 1, library type: paired-end
-      orientation: fr
-      left reads: ['/mnt/data/keratinocytes-0.5d-rep1.end1.trimmed.fastq.gz']
-      right reads: ['/mnt/data/keratinocytes-0.5d-rep1.end2.trimmed.fastq.gz']
-      interlaced reads: not specified
-      single reads: not specified
-      merged reads: not specified
-Read error correction parameters:
-  Iterations: 1
-  PHRED offset will be auto-detected
-  Corrected reads will be compressed
-Assembly parameters:
-  k: automatic selection based on read length
-  Repeat resolution is enabled
-  Mismatch careful mode is turned OFF
-  MismatchCorrector will be SKIPPED
-  Coverage cutoff is turned OFF
-Other parameters:
-  Dir for temp files: /mnt/data/SPAdes-3.14-keratinocytes-0.5d-rep1/tmp
-  Threads: 20
-  Memory limit (in Gb): 204
-
-
-======= SPAdes pipeline started. Log can be found here: /mnt/data/SPAdes-3.14-keratinocytes-0.5d-rep1/spades.log
-
-/mnt/data/keratinocytes-0.5d-rep1.end2.trimmed.fastq.gz: max reads length: 76
-/mnt/data/keratinocytes-0.5d-rep1.end1.trimmed.fastq.gz: max reads length: 76
-
-Reads length: 76
-
-
-===== Read error correction started. 
-
-
-===== Read error correction started. 
-
-
-== Running: /opt/SPAdes-3.14.0-Linux/bin/spades-hammer /mnt/data/SPAdes-3.14-keratinocytes-0.5d-rep1/corrected/configs/config.info
-
-  0:00:00.000     6M / 13M   INFO    General                 (main.cpp                  :  75)   Starting BayesHammer, built from refs/heads/spades_3.14.0, git revision c831f9be30a4364383cd4ebe5b78cdfcaad1acc9
-  0:00:00.000     6M / 13M   INFO    General                 (main.cpp                  :  76)   Loading config from /mnt/data/SPAdes-3.14-keratinocytes-0.5d-rep1/corrected/configs/config.info
-  0:00:00.186     7M / 13M   INFO    General                 (main.cpp                  :  78)   Maximum # of threads to use (adjusted due to OMP capabilities): 20
-  0:00:00.186     7M / 13M   INFO    General                 (memory_limit.cpp          :  49)   Memory limit set to 204 Gb
-  0:00:00.186     7M / 13M   INFO    General                 (main.cpp                  :  86)   Trying to determine PHRED offset
-  0:00:00.215     7M / 13M   INFO    General                 (main.cpp                  :  92)   Determined value is 33
-  0:00:00.215     7M / 13M   INFO    General                 (hammer_tools.cpp          :  38)   Hamming graph threshold tau=1, k=21, subkmer positions = [ 0 10 ]
-  0:00:00.215     7M / 13M   INFO    General                 (main.cpp                  : 113)   Size of aux. kmer data 24 bytes
-     === ITERATION 0 begins ===
-  0:00:01.378     7M / 13M   INFO   K-mer Index Building     (kmer_index_builder.hpp    : 301)   Building kmer index
-  0:00:01.378     7M / 13M   INFO    General                 (kmer_index_builder.hpp    : 117)   Splitting kmer instances into 320 files using 20 threads. This might take a while.
-  0:00:01.821     7M / 13M   INFO    General                 (file_limit.hpp            :  32)   Open file limit set to 1048576
-  0:00:01.821     7M / 13M   INFO    General                 (kmer_splitters.hpp        :  89)   Memory available for splitting buffers: 3.39999 Gb
-  0:00:01.821     7M / 13M   INFO    General                 (kmer_splitters.hpp        :  97)   Using cell size of 209715
-  0:00:01.843    13G / 13G   INFO   K-mer Splitting          (kmer_data.cpp             :  97)   Processing /mnt/data/keratinocytes-0.5d-rep1.end1.trimmed.fastq.gz
-  0:17:53.388    13G / 13G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 13160002 reads
-  0:37:05.984    13G / 13G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 26221405 reads
-  0:56:19.286    13G / 13G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 38443123 reads
-  1:15:33.612    13G / 13G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 49051279 reads
-  1:36:03.143    13G / 13G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 59734618 reads
-  1:58:01.606    13G / 13G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 70469203 reads
-  2:23:03.385    13G / 13G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 83566956 reads
-  2:49:17.334    13G / 13G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 96591029 reads
-  3:17:56.190    13G / 13G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 109437559 reads
-  3:48:39.303    13G / 13G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 120712614 reads
-  4:22:22.591    13G / 13G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 131454394 reads
-  4:58:23.120    13G / 13G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 142132818 reads
-  5:36:46.765    13G / 13G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 152937013 reads
-  5:36:46.766    13G / 13G   INFO   K-mer Splitting          (kmer_data.cpp             :  97)   Processing /mnt/data/keratinocytes-0.5d-rep1.end2.trimmed.fastq.gz
- 14:16:05.379    13G / 13G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 274599076 reads
+...
 ```
 
 # Submitting a large number of jobs 
 
-This gets tricky... GCP and AWS functionality is largely analogus with the exception of batch job submission, as documented in this service comparison released by GCP in November 2018 https://cloud.google.com/docs/compare/aws#service_comparisons 
+This gets tricky... GCP and AWS functionality is largely analogus with the exception of batch job submission, as [documented in this service comparison released by GCP in November 2018](https://cloud.google.com/docs/compare/aws#service_comparisons)
 
-Some tools that may help achieve the desired SLURM-like functionality are: 
+Some tools that may help achieve the desired SLURM-like functionality we have come to know and love are: 
 
-* helm charts https://helm.sh/
-* GKE Batch (currently in beta): https://cloud.google.com/batch/
+* [Helm charts](https://helm.sh/)
+* [GKE Batch (currently in beta)](https://cloud.google.com/batch/)
 
-These are highly useful tools for production-quality kubernetes clusters and worth learning -- but the learning curve can be a bit steep. (Comment below if you've had success running GCP batch jobs with these tools). 
+These are useful tools for production-quality kubernetes clusters and worth learning -- but the learning curve can be a bit steep. (Comment below if you've had success running GCP batch jobs with these tools). 
 
-If you're a grad student trying to process some data or train some machine learning models, a "hack" is as follows: 
+If you're a grad student trying to process some data or train some machine learning models as painlessly as possible, a "hack" is as follows: 
 
 1) Create a template yaml file with placeholders for the job name and the script arguments, as follows: 
 
+spades_job.template.yaml:
 ```
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: NAME
+spec:
+  ttlSecondsAfterFinished: 30
+  template:
+    spec:
+      containers:
+      - name: spades
+        image: kundajelab/spades_gcp:latest
+        resources:
+          requests:
+            memory: 50Gi
+            cpu: 15
+          limits:
+            memory: 100Gi
+            cpu: 15
+        securityContext:
+          privileged: true
+          capabilities:
+            add:
+              - SYS_ADMIN
+        command: ["/opt/script.sh"]
+        args: ["ARGS"]
+      restartPolicy: OnFailure
+  backoffLimit: 1
 
 ```
+Notice that this script is the same as "spades_job.yaml" above, with the exceptions that "NAME" and "ARGS" have been used to replace the actual job name and arguments. 
+
+We can write a batch job that iterates through all samples to be processed and uses the "sed" command to replace these placeholders with actual job and samle names:
+
+make_job_yamls.sh
+```
+#!/bin/bash
+num_tasks=`cat tasks | wc -l`
+echo $num_tasks
+for i in `seq 1 $num_tasks`
+do
+    sample=`head -n $i tasks | tail -n1`
+    task_name=spades$i
+    echo $sample
+    echo $task_name
+    sed "s/NAME/$task_name/g" spades_job.template.yaml > tmp
+    sed "s/ARGS/$sample/g" tmp > job_$task_name.yaml
+    rm tmp 
+done
+```
+Where the tasks file is a list of sample names to analyze: 
+```
+head tasks
+keratinocytes-0.5d-rep1
+keratinocytes-0.5d-rep2
+keratinocytes-0h-rep1
+keratinocytes-0h-rep2
+```
+This will produce a yaml file for each job with a unique job name. 
+
