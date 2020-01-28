@@ -23,6 +23,7 @@ twitter_username: anshulkundaje
 github_username:  kundajelab
 disqus:
     shortname: kundajelab-github-io
+google_analytics: UA-157159517-1
 
 # Build settings
 markdown: kramdown
