@@ -6,6 +6,7 @@ categories: Publication
 author: 'Avanti Shrikumar and Amr Alexandari'
 ---
 
+<div id="presentation-embed-38927616" class="slp my-auto"></div>
 <script src='https://slideslive.com/embed_presentation.js'></script>
 <script>
 embed = new SlidesLiveEmbed('presentation-embed-38927616', {
