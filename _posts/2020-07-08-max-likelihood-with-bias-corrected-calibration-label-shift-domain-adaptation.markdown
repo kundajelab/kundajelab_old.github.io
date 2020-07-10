@@ -13,6 +13,7 @@ author: 'Avanti Shrikumar and Amr Alexandari'
 Accepted to ICML 2020
 
 Paper: [https://arxiv.org/abs/1901.06852](https://arxiv.org/abs/1901.06852)
+Authors: Amr Alexandari\*, Anshul Kundaje†, Avanti Shrikumar\*† (\*co-first authors, †co-corresponding authors)
 
 (Writeup in progress)
 
