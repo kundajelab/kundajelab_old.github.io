@@ -15,7 +15,9 @@ Paper: [https://arxiv.org/abs/1901.06852](https://arxiv.org/abs/1901.06852)
 Authors: Amr Alexandari\*, Anshul Kundaje†, Avanti Shrikumar\*†  
 (\*co-first authors, †co-corresponding authors)
 
-# Introduction
+(Writeup in progress)
+
+## Introduction
 
 Machine learning algorithms have been greatly successful and widely deployed. Yet, they are typically developed, evaluated, and analyzed assuming independent and identically distributed (i.i.d) data. These carefully curated datasets rarely capture the range and messiness of real world data. Enabling automated systems to be robust to the ever-changing shifts present in real world data remains a critical goal of machine learning systems. 
 
@@ -23,7 +25,7 @@ Machine learning algorithms have been greatly successful and widely deployed. Ye
 
 Saerens et al. 2002 proposed an Expectation Maximization (EM) algorithm that estimates $$p_t(y)$$ but assumes access to a classifier that outputs the true source distribution conditional probabilities $$p_s(y|x)$$. Unfortunately, estimates of $$p(y|x)$$ derived from modern neural networks are often poorly calibrated (Guo et al., 2017), and the lack of calibration can decrease the effectiveness of EM. Recently, Black Box Shift Estimation (BBSE) [Lipton et al., 2018] and a variant called Regularized Learning Label Shift (RLLS) [Azizzadenesheli et al., 2019]: leverage (possibly uncalibrated) predictions off-the-shelf classifiers to estimate the shift.
 
-Bias Corrected Temperature Scaling
+## Bias Corrected Temperature Scaling
 
 Calibration has a long history in the machine learning literature (DeGroot and Fienberg, 1983; Platt, 1999; Zadrozny and Elkan; 2002; Niculescu-Mizil and Caruana, 2005; Kuleshov and Liang, 2015; Naeini et al., 2015; Kuleshov and Ermon, 2016). In the context of modern neural networks, Guo et al. (2017) showed that Temperature Scaling, a single-parameter variant of Platt Scaling (Platt, 1999), was effective at reducing miscalibration.  Guo et al. (2017) compared TS to an approach defined as Vector Scaling (VS), where a different scaling parameter was used for each class along with class-specfic bias parameters and found that vector scaling had a tendency to perform slightly worse than TS as measured by a metric known as the Expected Calibration Error (Naeini et al., 2015).
 
@@ -31,10 +33,10 @@ Calibration has a long history in the machine learning literature (DeGroot and F
 
 As shown in the figure, we often found that TS alone resulted in systematically biased estimates of p(y_i \|x_k ), while VS, a generalization of TS that contains both class-specific bias terms and class-specific scaling terms, did not exhibit as much systematic bias. Intrigued by this observation, we investigated the performance of two intermediaries between Temperature Scaling and Vector Scaling. The first, which we refer to as No Bias Vector Scaling (NBVS), is equivalent to vector scaling but with all the class-specific bias parameters fixed at zero. The second, which we refer to as Bias-Corrected Temperature Scaling, is equivalent TS Scaling but with the addition of the class-specific bias terms from VS. As with TS and VS, the parameters are optimized to minimize the NLL on the validation set. Note that in the case of binary classification, the parameterization of BCTS reduces to Platt Scaling (Platt, 1999). Thus, BCTS can be viewed as a multi-class generalization of Platt scaling. Given fitted calibration parameters, performing calibration on test data takes O(mN) time where m is the number of output classes and N is the number of datapoints.
 
-Defining source-domain priors in the EM
+## Defining source-domain priors in the EM
 
 The EM algorithm of (Saerens et al., 2002) requires the user to provide estimates of the source-domain prior class probabilities p^(y = i). Let us consider two possible approaches to estimating these probabilities. The first approach, considered in the original paper, is to set p^(y = i) to the expected value of the binary label y = i over the source domain dataset. A second, less obvious, approach is to set it to the expected value of p^(y = i \|x) over the source domain dataset. If p^(y = i \|x) were unbiased, we anticipate that the two approaches would agree. However, depending on the calibration of p^(y = i \|x), this may not be the case. In our work, we show that the latter approach for estimating source-domain priors improves the algorithm's robustness to poor calibration.
 
-Another look at maximum likelihood
+## Another look at maximum likelihood
 
 The
