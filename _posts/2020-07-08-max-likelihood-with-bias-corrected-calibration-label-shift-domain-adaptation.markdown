@@ -34,3 +34,11 @@ Calibration has a long history in the machine learning literature (DeGroot and F
 </center>
 
 As shown in the figure, we often found that TS alone resulted in systematically biased estimates of p(y_i \|x_k ), while VS, a generalization of TS that contains both class-specific bias terms and class-specific scaling terms, did not exhibit as much systematic bias. Intrigued by this observation, we investigated the performance of two intermediaries between Temperature Scaling and Vector Scaling. The first, which we refer to as No Bias Vector Scaling (NBVS), is equivalent to vector scaling but with all the class-specific bias parameters fixed at zero. The second, which we refer to as Bias-Corrected Temperature Scaling, is equivalent TS Scaling but with the addition of the class-specific bias terms from VS. As with TS and VS, the parameters are optimized to minimize the NLL on the validation set. Note that in the case of binary classification, the parameterization of BCTS reduces to Platt Scaling (Platt, 1999). Thus, BCTS can be viewed as a multi-class generalization of Platt scaling. Given fitted calibration parameters, performing calibration on test data takes O(mN) time where m is the number of output classes and N is the number of datapoints.
+
+Defining source-domain priors in the EM
+
+The EM algorithm of (Saerens et al., 2002) requires the user to provide estimates of the source-domain prior class probabilities p^(y = i). Let us consider two possible approaches to estimating these probabilities. The first approach, considered in the original paper, is to set p^(y = i) to the expected value of the binary label y = i over the source domain dataset. A second, less obvious, approach is to set it to the expected value of p^(y = i|x) over the source domain dataset. If p^(y = i|x) were unbiased, we anticipate that the two approaches would agree. However, depending on the calibration of p^(y = i|x), this may not be the case. In our work, we show that the latter approach for estimating source-domain priors improves the algorithm's robustness to poor calibration.
+
+Another look at maximum likelihood
+
+The
