@@ -37,7 +37,7 @@ As shown in the figure, we often found that TS alone resulted in systematically 
 
 Defining source-domain priors in the EM
 
-The EM algorithm of (Saerens et al., 2002) requires the user to provide estimates of the source-domain prior class probabilities p^(y = i). Let us consider two possible approaches to estimating these probabilities. The first approach, considered in the original paper, is to set p^(y = i) to the expected value of the binary label y = i over the source domain dataset. A second, less obvious, approach is to set it to the expected value of p^(y = i\|x) over the source domain dataset. If p^(y = i\|x) were unbiased, we anticipate that the two approaches would agree. However, depending on the calibration of p^(y = i\|x), this may not be the case. In our work, we show that the latter approach for estimating source-domain priors improves the algorithm's robustness to poor calibration.
+The EM algorithm of (Saerens et al., 2002) requires the user to provide estimates of the source-domain prior class probabilities p^(y = i). Let us consider two possible approaches to estimating these probabilities. The first approach, considered in the original paper, is to set p^(y = i) to the expected value of the binary label y = i over the source domain dataset. A second, less obvious, approach is to set it to the expected value of p^(y = i \|x) over the source domain dataset. If p^(y = i \|x) were unbiased, we anticipate that the two approaches would agree. However, depending on the calibration of p^(y = i \|x), this may not be the case. In our work, we show that the latter approach for estimating source-domain priors improves the algorithm's robustness to poor calibration.
 
 Another look at maximum likelihood
 
