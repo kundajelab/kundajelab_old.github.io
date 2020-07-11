@@ -10,10 +10,10 @@ author: 'Avanti Shrikumar and Amr Alexandari'
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZBXjE9QTruE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 
-Accepted to ICML 2020
-
-Paper: [https://arxiv.org/abs/1901.06852](https://arxiv.org/abs/1901.06852)
-Authors: Amr Alexandari\*, Anshul Kundaje†, Avanti Shrikumar\*† (\*co-first authors, †co-corresponding authors)
+Accepted to ICML 2020  
+Paper: [https://arxiv.org/abs/1901.06852](https://arxiv.org/abs/1901.06852)  
+Authors: Amr Alexandari\*, Anshul Kundaje†, Avanti Shrikumar\*†  
+(\*co-first authors, †co-corresponding authors)
 
 (Writeup in progress)
 
