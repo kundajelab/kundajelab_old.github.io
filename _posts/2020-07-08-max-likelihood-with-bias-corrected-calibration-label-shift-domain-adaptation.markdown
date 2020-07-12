@@ -55,6 +55,8 @@ In summary:
 
 A number of useful resources:
 
-Notebooks reproducing experiments: [https://github.com/kundajelab/labelshiftexperiments] (https://github.com/kundajelab/labelshiftexperiments)
+<ul>
+<li>Notebooks reproducing experiments: https://github.com/kundajelab/labelshiftexperiments </li>
 
-Follow up work by Garg et al. that establishes sufficient conditions for maximum likelihood consistency and derives finite-sample error bounds: [https://arxiv.org/abs/2003.07554] (https://arxiv.org/abs/2003.07554)
+<li>Follow up work by Garg et al. that establishes sufficient conditions for consistency of the maximum likelihood approach and derives finite-sample error bounds: https://arxiv.org/abs/2003.07554 </li>
+</ul>
