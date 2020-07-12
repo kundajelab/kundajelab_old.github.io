@@ -6,12 +6,7 @@ categories: Publication
 author: 'Avanti Shrikumar and Amr Alexandari'
 ---
 
-<center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZBXjE9QTruE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center>
-
 Accepted to ICML 2020  
-Paper: [https://arxiv.org/abs/1901.06852](https://arxiv.org/abs/1901.06852)  
 Authors: Amr Alexandari\*, Anshul Kundaje†, Avanti Shrikumar\*†  
 (\*co-first authors, †co-corresponding authors)
 
@@ -56,6 +51,11 @@ In summary:
 A number of useful resources:
 
 <ul>
+<li>Paper: [https://arxiv.org/abs/1901.06852](https://arxiv.org/abs/1901.06852)  </li>
+<li> Video:
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZBXjE9QTruE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center></li>
 <li>Notebooks reproducing experiments: https://github.com/kundajelab/labelshiftexperiments </li>
 
 <li>Follow up work by Garg et al. that establishes sufficient conditions for consistency of the maximum likelihood approach and derives finite-sample error bounds: https://arxiv.org/abs/2003.07554 </li>
