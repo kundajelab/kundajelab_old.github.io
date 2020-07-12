@@ -39,17 +39,19 @@ The EM algorithm of (Saerens et al., 2002) requires the user to provide estimate
 
 The
 
-## Summary & Discussion
+## Summary & Additional Resources
 
 In summary:
 
-The real world is dynamic and real world data distributions are capricious. Enabling automated systems to be robust to the ever-changing shifts present in real world data remains a critical goal of machine learning systems, and is known as "domain adaptation".
+<ul>
+<li>The real world is dynamic and real world data distributions are capricious. Enabling automated systems to be robust to the ever-changing shifts present in real world data remains a critical goal of machine learning systems, and is known as "domain adaptation".</li>
 
-Label shift adaptation arises in settings such as medical diagnosis, and deals with shifts in the distribution of labels while the process generating the properties and manifestations of the label is fixed.
+<li>Label shift adaptation arises in settings such as medical diagnosis, and deals with shifts in the distribution of labels while the process generating the properties and manifestations of the label is fixed.</li>
 
-The popular calibration approach of Temperature Scaling (TS) does not tend to achieve the best results for adaptation to label shift, possibly owing to large systematic biases in the calibrated probabilities. Best results are obtained with variants of TS containing class-specific bias parameters that can correct for systematic bias.
+<li>The popular calibration approach of Temperature Scaling (TS) does not tend to achieve the best results for adaptation to label shift, possibly owing to large systematic biases in the calibrated probabilities. Best results are obtained with variants of TS containing class-specific bias parameters that can correct for systematic bias.</li>
 
-Maximum likelihood algorithms, such as EM, achieve state-of-the-art results when used with an appropriate type of calibration. Although moment matching algorithms benefit from calibration, they did not tend to outperform maximum likelihood when the probabilities were well-calibrated.
+<li>Maximum likelihood algorithms, such as EM, achieve state-of-the-art results when used with an appropriate type of calibration. Although moment matching algorithms benefit from calibration, they did not tend to outperform maximum likelihood when the probabilities were well-calibrated.</li>
+</ul>
 
 A number of useful resources:
 
