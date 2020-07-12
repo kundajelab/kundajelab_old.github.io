@@ -53,6 +53,6 @@ Maximum likelihood algorithms, such as EM, achieve state-of-the-art results when
 
 A number of useful resources:
 
-Notebooks reproducing experiments: [https://github.com/kundajelab/labelshiftexperiments]
+Notebooks reproducing experiments: [https://github.com/kundajelab/labelshiftexperiments] (https://github.com/kundajelab/labelshiftexperiments)
 
-Follow up work by Garg et al. that establishes sufficient conditions for maximum likelihood consistency and derives finite-sample error bounds: [https://arxiv.org/abs/2003.07554]
+Follow up work by Garg et al. that establishes sufficient conditions for maximum likelihood consistency and derives finite-sample error bounds: [https://arxiv.org/abs/2003.07554] (https://arxiv.org/abs/2003.07554)
