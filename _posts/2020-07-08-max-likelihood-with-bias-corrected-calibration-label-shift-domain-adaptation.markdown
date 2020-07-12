@@ -37,4 +37,22 @@ Saerens et al. 2002 proposed an Expectation Maximization (EM) algorithm that est
 
 The EM algorithm of (Saerens et al., 2002) requires the user to provide estimates of the source-domain prior class probabilities $$\hat{p}(y = i)$$. Let us consider two possible approaches to estimating these probabilities. The first approach, considered in the original paper, is to set $$\hat{p}(y = i)$$ to the expected value of the binary label $$y = i$$ over the source domain dataset. A second, less obvious, approach is to set it to the expected value of $$\hat{p}(y = i \mid \boldsymbol{x})$$ over the source domain dataset. If $$\hat{p}(y = i \mid \boldsymbol{x})$$ were unbiased, we anticipate that the two approaches would agree. However, depending on the calibration of $$\hat{p}(y = i \mid \boldsymbol{x})$$, this may not be the case. In our work, we show that the latter approach for estimating source-domain priors improves the algorithm's robustness to poor calibration.
 
+The
 
+## Summary & Discussion
+
+In summary:
+
+The real world is dynamic and real world data distributions are capricious. Enabling automated systems to be robust to the ever-changing shifts present in real world data remains a critical goal of machine learning systems, and is known as "domain adaptation".
+
+Label shift adaptation arises in settings such as medical diagnosis, and deals with shifts in the distribution of labels while the process generating the properties and manifestations of the label is fixed.
+
+The popular calibration approach of Temperature Scaling (TS) does not tend to achieve the best results for adaptation to label shift, possibly owing to large systematic biases in the calibrated probabilities. Best results are obtained with variants of TS containing class-specific bias parameters that can correct for systematic bias.
+
+Maximum likelihood algorithms, such as EM, achieve state-of-the-art results when used with an appropriate type of calibration. Although moment matching algorithms benefit from calibration, they did not tend to outperform maximum likelihood when the probabilities were well-calibrated.
+
+A number of useful resources:
+
+Notebooks reproducing experiments: [https://github.com/kundajelab/labelshiftexperiments]
+
+Follow up work by Garg et al. that establishes sufficient conditions for maximum likelihood consistency and derives finite-sample error bounds: [https://arxiv.org/abs/2003.07554]
