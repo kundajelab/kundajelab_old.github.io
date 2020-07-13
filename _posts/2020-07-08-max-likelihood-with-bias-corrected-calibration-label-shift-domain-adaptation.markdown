@@ -32,7 +32,7 @@ As shown in the figure, we often found that TS alone resulted in systematically 
 
 Saerens et al. 2002 proposed an Expectation Maximization (EM) algorithm that estimates $$p_t(y)$$ but assumes access to a classifier that outputs the true source distribution conditional probabilities $$p_s(y \mid \boldsymbol{x})$$. This is a simple and scalable maximum likelihood approach, but unfortunately, estimates of $$p(y \mid \boldsymbol{x})$$ derived from modern neural networks are often poorly calibrated (Guo et al., 2017), and the lack of calibration can decrease the effectiveness of EM. For this reason, comparisons against the EM algorithm have been absent in the label shift adaptation literature.
 
-Recently, Black Box Shift Estimation (BBSE) [Lipton et al., 2018] and a variant called Regularized Learning Label Shift (RLLS) [Azizzadenesheli et al., 2019]: leverage (possibly uncalibrated) predictions off-the-shelf classifiers to estimate the shift. Both of these moment-matching estimators require model retraining with importance weights which can be challenging at large scales. 
+Recently, Black Box Shift Estimation (BBSE) (Lipton et al., 2018) and a variant called Regularized Learning Label Shift (RLLS) (Azizzadenesheli et al., 2019): leverage (possibly uncalibrated) predictions off-the-shelf classifiers to estimate the shift. Both of these moment-matching estimators require model retraining with importance weights which can be challenging at large scales. 
 
 In our paper, we revisit maximum likelihood. We show that in combination with good calibration, a maximum likelihood procedure outperforms all other methods empirically and achieves state of the art results. Our approach is as follows:
 <ul>
