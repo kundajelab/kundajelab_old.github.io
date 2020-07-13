@@ -39,7 +39,7 @@ In our paper, we revisit maximum likelihood. We show that in combination with go
 <li>Given a model that outputs predicted probabilities, calibrate the predictions of the model on a held-out validation using an appropriately strong calibration algorithm. We observed that BCTS and VS work well.</li>
 <li>Average the calibrated predictions over this held-out validation set to obtain the estimated source-domain class priors. This is a principled strategy for estimating source-domain priors improves robustness to poor calibration.</li>
 <li>Given samples from the target domain, use the estimated source-domain class priors and the calibrated predictor to optimize the concave maximum likelihood objective in w.r.t. the estimated target-domain class proportions.</li>
-<li>After estimating target-domain class proportions, compute the adapted predictions for the target domain similar to the E-step of EM</li>
+<li>After estimating target-domain class proportions, compute the adapted predictions for the target domain similar to the E-step of EM.</li>
 </ul>
 This work demonstrates that the maximum likelihood with appropriate calibration is a formidable and efficient baseline for label shift adaptation.
 
@@ -60,7 +60,7 @@ In summary:
 A number of useful resources:
 
 <ul>
-<li>Paper: <a href="https://arxiv.org/abs/1901.06852">https://arxiv.org/abs/1901.06852</a>  </li>
-<li>Notebooks reproducing experiments: <a href="https://github.com/kundajelab/labelshiftexperiments">https://github.com/kundajelab/labelshiftexperiments</a> </li>
-<li>Follow up work by Garg et al. that establishes sufficient conditions for consistency of the maximum likelihood approach and derives finite-sample error bounds: <a href="https://arxiv.org/abs/2003.07554">https://arxiv.org/abs/2003.07554</a> </li>
+<li>Paper: <a href="https://arxiv.org/abs/1901.06852">https://arxiv.org/abs/1901.06852</a></li>
+<li>Notebooks reproducing experiments: <a href="https://github.com/kundajelab/labelshiftexperiments">https://github.com/kundajelab/labelshiftexperiments</a></li>
+<li>Follow up work by Garg et al. that establishes sufficient conditions for consistency of the maximum likelihood approach and derives finite-sample error bounds: <a href="https://arxiv.org/abs/2003.07554">https://arxiv.org/abs/2003.07554</a></li>
 </ul>
