@@ -25,7 +25,7 @@ The problem of distribution shift in its most general form is intractable. Howev
 Calibration has a long history in the machine learning literature (DeGroot and Fienberg, 1983; Platt, 1999; Zadrozny and Elkan; 2002; Niculescu-Mizil and Caruana, 2005; Kuleshov and Liang, 2015; Naeini et al., 2015; Kuleshov and Ermon, 2016). In the context of modern neural networks, Guo et al. (2017) showed that Temperature Scaling (TS), a single-parameter variant of Platt Scaling (Platt, 1999), was effective at reducing miscalibration.  Guo et al. (2017) compared TS to an approach defined as Vector Scaling (VS), where a different scaling parameter was used for each class along with class-specfic bias parameters and found that vector scaling had a tendency to perform slightly worse than TS as measured by a metric known as the Expected Calibration Error (Naeini et al., 2015).
 
 <div align="center">
-<img src="https://github.com/kundajelab/kundajelab.github.io/blob/master/_posts/2020-07-08-figure.png" >
+<img src="https://github.com/kundajelab/kundajelab.github.io/blob/master/_posts/2020-07-08-figure.png?raw=true" >
 <p align="left"><em>Temperature Scaling exhibits systematic bias. On CIFAR10 data, systematic bias was quantified by the JS divergence between the true class label proportions and the average class predictions on a held-out test set drawn from the same distribution as the dataset used for calibration. TS: Temperature Scaling, NBVS: No-Bias Vector Scaling, BCTS: Bias-Corrected Temperature Scaling, VS: Vector Scaling. BCTS and VS had significantly lower systematic bias compared to TS and NBVS.</em></p>
 </div>
 
