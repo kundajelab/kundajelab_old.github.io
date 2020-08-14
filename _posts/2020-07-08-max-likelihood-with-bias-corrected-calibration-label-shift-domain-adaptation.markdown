@@ -79,11 +79,11 @@ Our approach is as follows:
 <li>After estimating target-domain class proportions, compute the adapted predictions for the target domain similar to the E-step of EM.</li>
 </ul>
 
-The proposed approach results in great performance.
+In our experiments, the proposed approach results in state of the art performance.
 
 <div align="center">
-<img src="https://github.com/kundajelab/kundajelab.github.io/blob/master/_posts/2020-07-08-figure.png?raw=true" >
-<p align="left"><em>Temperature Scaling exhibits systematic bias. On CIFAR10 data, systematic bias was quantified by the JS divergence between the true class label proportions and the average class predictions on a held-out test set drawn from the same distribution as the dataset used for calibration. TS: Temperature Scaling, NBVS: No-Bias Vector Scaling, BCTS: Bias-Corrected Temperature Scaling, VS: Vector Scaling. BCTS and VS had significantly lower systematic bias compared to TS and NBVS.</em></p>
+<img src="https://github.com/kundajelab/kundajelab.github.io/blob/master/_posts/2020-07-08-figure2.png?raw=true" >
+<p align="left"><em>BCTS calibrated maximum likelihood is effective. On CIFAR10 data, performance was quantified by the mean squared error in ratio of target domain and source domain probabilities $p_t(y)/p_s(y)$</em></p>
 </div>
 
 This work demonstrates that the maximum likelihood with appropriate calibration is a formidable and efficient baseline for label shift adaptation. Follow up work by Garg et al. that studies why well-calibrated maximum likelihood is effective indepedently verified our findings: "Across all shifts, MLLS (with BCTS-calibrated classifiers) uniformly dominates BBSE, RLLS, ..."
