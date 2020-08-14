@@ -83,7 +83,8 @@ In our experiments, the proposed approach results in state of the art performanc
 
 <div align="center">
 <img src="https://github.com/kundajelab/kundajelab.github.io/blob/master/_posts/2020-07-08-figure2.png?raw=true" >
-<p align="left"><em>BCTS calibrated maximum likelihood is effective. On CIFAR10 data, performance was quantified by the mean squared error in ratio of target domain and source domain probabilities $p_t(y)/p_s(y)$</em></p>
+<p align="left"><em>BCTS calibrated maximum likelihood is effective. On CIFAR10 data, performance was quantified by the mean squared error in ratio of target domain and source domain probabilities $p_t(y)/p_s(y)$. Dirichlet shift ($\alpha=0.1$) simulated over 10 trials for each of 10 different trained models (100 trials in total). $N=2000$ samples were used in validation & test sets (results are qualitatively similar for different $\alpha$ and $N$ as well).
+</em></p>
 </div>
 
 This work demonstrates that the maximum likelihood with appropriate calibration is a formidable and efficient baseline for label shift adaptation. Follow up work by Garg et al. that studies why well-calibrated maximum likelihood is effective indepedently verified our findings: "Across all shifts, MLLS (with BCTS-calibrated classifiers) uniformly dominates BBSE, RLLS, ..."
