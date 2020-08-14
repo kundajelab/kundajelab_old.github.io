@@ -78,7 +78,8 @@ Our approach is as follows:
 <li>Given samples from the target domain, use the estimated source-domain class priors and the calibrated predictor $$p(y_i\mid\boldsymbol{x})$$ to optimize the concave maximum likelihood objective mentioned above w.r.t. the estimated target-domain class proportions $$p_t(y_i)$$.</li>
 <li>After estimating target-domain class proportions, compute the adapted predictions for the target domain similar to the E-step of EM.</li>
 </ul>
-This work demonstrates that the maximum likelihood with appropriate calibration is a formidable and efficient baseline for label shift adaptation.
+
+This work demonstrates that the maximum likelihood with appropriate calibration is a formidable and efficient baseline for label shift adaptation. Follow up work by Garg et al. showed that our approach is indeed successful: "Across all shifts, MLLS (with BCTS-calibrated classifiers) uniformly dominates BBSE, RLLS, ..."
 
 ## Summary & Additional Resources
 
