@@ -75,7 +75,7 @@ Our approach is as follows:
 <ul>
 <li>Given a model that outputs predicted probabilities, calibrate the predictions of the model on a held-out validation using an appropriately strong calibration algorithm. We observed that BCTS and VS work well.</li>
 <li>Average the calibrated predictions over this held-out validation set to obtain the estimated source-domain class priors. This is a principled strategy for estimating source-domain priors improves robustness to poor calibration.</li>
-<li>Given samples from the target domain, use the estimated source-domain class priors and the calibrated predictor $$p(y_i\mid\boldsymbol{x})$$ to optimize the concave maximum likelihood objective mentioned above w.r.t. the estimated target-domain class proportions $$p_t(y_i)$$.</li>
+<li>Given samples from the target domain, use the estimated source-domain class priors and the calibrated predictor $p(y_i\mid\boldsymbol{x})$ to optimize the concave maximum likelihood objective mentioned above w.r.t. the estimated target-domain class proportions $p_t(y_i)$.</li>
 <li>After estimating target-domain class proportions, compute the adapted predictions for the target domain similar to the E-step of EM.</li>
 </ul>
 
