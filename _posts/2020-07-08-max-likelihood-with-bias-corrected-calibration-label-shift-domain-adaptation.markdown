@@ -61,9 +61,15 @@ Since there is no need to estimate $$p(\boldsymbol{x} \mid y)$$ in any step of t
 
 Recently, Black Box Shift Estimation (BBSE) (Lipton et al., 2018) and a variant called Regularized Learning Label Shift (RLLS) (Azizzadenesheli et al., 2019): leverage (possibly uncalibrated) predictions off-the-shelf classifiers to estimate the shift. Both of these moment-matching estimators require model retraining with importance weights which can be challenging at large scales. 
 
-In our paper, we revisit maximum likelihood. We show that in combination with good calibration, a maximum likelihood procedure outperforms all other methods empirically and achieves state of the art results. Let's examine the maximum likelihood objective. Let $$\omega_i$$ denote membership in class $$i$$. We seek target-domain priors $$p_t(\omega_i)$$ that maximize the log-likelihood $$l(\boldsymbol{X}; p_t(\omega_i)) = 􏰀\sum_{k} log \sum_{i} q(\boldsymbol{x_k}\mid\omega_i)$$
+In our paper, we revisit maximum likelihood. We show that in combination with good calibration, a maximum likelihood procedure outperforms all other methods empirically and achieves state of the art results. Let's examine the maximum likelihood objective. Let $$\omega_i$$ denote membership in class $$i$$. We seek target-domain priors $$p_t(\omega_i)$$ that maximize the log-likelihood:
 
+$$l(\boldsymbol{X}; p_t(\omega_i)) = 􏰀\sum_{k} log \sum_{i} p_t(\boldsymbol{x_k}\mid\omega_i) q(\omega_i)$$
 
+which we show is equivalent to
+
+$$l(\boldsymbol{X}; p_t(\omega_i)) = 􏰀\sum_{k} log(p_s(\boldsymbol{x_k})) + log \sum_{i}\frac{p_s(\omega_i\mid\boldsymbol{x_k})}{p_s(\omega_i)}p_t{\omega_i}$$
+
+The paper contains proof that the maximum likelihood objective above is concave, so EM converges to the global maximum. Furthermore, any optimization algorithm could be used, so we are not restricted to EM.
 
 Our approach is as follows:
 <ul>
