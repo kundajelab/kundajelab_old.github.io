@@ -51,17 +51,21 @@ Saerens et al. 2002 proposed an Expectation Maximization (EM) algorithm that est
 
 $$p_t(y_i)^{(0)}=p_s(y_i)$$
 
-$$p_t(y_i \mid \boldsymbol{x_k} )^{(l)}=\frac{\frac{p_t(y_i)^{(l)}}{p_s(y_i)}p_s(y_i \mid \boldsymbol{x_k} )}{\sum_{j=1}^{n}\frac{p_t(y_j)^{(l)}}{p_s(y_j)}p_s(y_j \mid \boldsymbol{x_k} )}$$
+$$p_t(y_i \mid \boldsymbol{x_k} )^{(r)}=\frac{\frac{p_t(y_i)^{(r)}}{p_s(y_i)}p_s(y_i \mid \boldsymbol{x_k} )}{\sum_{j=1}^{n}\frac{p_t(y_j)^{(r)}}{p_s(y_j)}p_s(y_j \mid \boldsymbol{x_k} )}$$
 
-$$p_t(y_i)^{(l+1)}=\frac{1}{N}\sum_{k=1}^{N} p_t(y_i \mid \boldsymbol{x_k} )^{(l)}$$
+$$p_t(y_i)^{(r+1)}=\frac{1}{N}\sum_{k=1}^{N} p_t(y_i \mid \boldsymbol{x_k} )^{(r)}$$
 
-where $$p_s(y_i)$$ is our estimate of the prior probability of observing class $$i$$ on the training set, $$p_t(y_i)^{(l)}$$ is the estimate in EM step $$l$$ of the prior probability of observing class $$i$$ on the testing set, $$p_s(y_i \mid \boldsymbol{x_k} )$$ is the conditional probability of observing class $$i$$ given features $$\boldsymbol{x_k}$$ on the training set, $$p_t(y_i \mid \boldsymbol{x_k} )^{(l)}$$ is the conditional probability in EM step $$l$$ of observing class $$i$$ given features $$\boldsymbol{x_k}$$ on the testing set, and $$N$$ is the number of examples in the testing set.
+where $$p_s(y_i)$$ is our estimate of the prior probability of observing class $$i$$ on the training set, $$p_t(y_i)^{(r)}$$ is the estimate in EM step $$r$$ of the prior probability of observing class $$i$$ on the testing set, $$p_s(y_i \mid \boldsymbol{x_k} )$$ is the conditional probability of observing class $$i$$ given features $$\boldsymbol{x_k}$$ on the training set, $$p_t(y_i \mid \boldsymbol{x_k} )^{(r)}$$ is the conditional probability in EM step $$r$$ of observing class $$i$$ given features $$\boldsymbol{x_k}$$ on the testing set, and $$N$$ is the number of examples in the testing set.
 
 Since there is no need to estimate $$p(\boldsymbol{x} \mid y)$$ in any step of the EM procedure, the algorithm can scale to high-dimensional datasets. Unfortunately, estimates of $$p(y \mid \boldsymbol{x})$$ derived from modern neural networks are often poorly calibrated (Guo et al., 2017), and the lack of calibration can decrease the effectiveness of EM. For this reason, comparisons against the EM algorithm have been absent in the label shift adaptation literature.
 
 Recently, Black Box Shift Estimation (BBSE) (Lipton et al., 2018) and a variant called Regularized Learning Label Shift (RLLS) (Azizzadenesheli et al., 2019): leverage (possibly uncalibrated) predictions off-the-shelf classifiers to estimate the shift. Both of these moment-matching estimators require model retraining with importance weights which can be challenging at large scales. 
 
-In our paper, we revisit maximum likelihood. We show that in combination with good calibration, a maximum likelihood procedure outperforms all other methods empirically and achieves state of the art results. Our approach is as follows:
+In our paper, we revisit maximum likelihood. We show that in combination with good calibration, a maximum likelihood procedure outperforms all other methods empirically and achieves state of the art results. Let's examine the maximum likelihood objective. Let $$\omega_i$$ denote membership in class $$i$$. We seek target-domain priors $$p_t(\omega_i)$$ that maximize the log-likelihood $$l(\boldsymbol{X}; p_t(\omega_i)) = 􏰀\sum_{k} log \sum_{i} q(\boldsymbol{x_k}|\omega_i)$$
+
+
+
+Our approach is as follows:
 <ul>
 <li>Given a model that outputs predicted probabilities, calibrate the predictions of the model on a held-out validation using an appropriately strong calibration algorithm. We observed that BCTS and VS work well.</li>
 <li>Average the calibrated predictions over this held-out validation set to obtain the estimated source-domain class priors. This is a principled strategy for estimating source-domain priors improves robustness to poor calibration.</li>
