@@ -24,10 +24,15 @@ The problem of distribution shift in its most general form is intractable. Howev
 
 Calibration has a long history in the machine learning literature (DeGroot and Fienberg, 1983; Platt, 1999; Zadrozny and Elkan; 2002; Niculescu-Mizil and Caruana, 2005; Kuleshov and Liang, 2015; Naeini et al., 2015; Kuleshov and Ermon, 2016). In the context of modern neural networks, Guo et al. (2017) showed that Temperature Scaling (TS), a single-parameter variant of Platt Scaling (Platt, 1999), was effective at reducing miscalibration. Let $$z(\boldsymbol{x_k})$$ be a function that returns the original logit vector. With temperature scaling, we have:
 
-$$p(y_i\mid \boldsymbol{x_k})=\frac{e^{\frac{z(\boldsymbol{x_k})_i}{T}}}{\sum_j e^{\frac{z(\boldsymbol{x_k})_j}{T}}}$$
+$$p(y_i\mid \boldsymbol{x_k})=\frac{e^{z(\boldsymbol{x_k})_i / T}}{\sum_j e^{z(\boldsymbol{x_k})_j /T}}$$
 
+The parameter $$T$$ is optimized with respect to the Negative Log Likelihood on a held-out portion of the training set, such as the validation set.
 
-Guo et al. (2017) compared TS to an approach defined as Vector Scaling (VS), where a different scaling parameter was used for each class along with class-specfic bias parameters and found that vector scaling had a tendency to perform slightly worse than TS as measured by a metric known as the Expected Calibration Error (Naeini et al., 2015).
+Guo et al. (2017) compared TS to an approach defined as Vector Scaling (VS), where a different scaling parameter was used for each class along with class-specfic bias parameters, namely:
+
+$$p(y_i\mid \boldsymbol{x_k})=\frac{e^{z(\boldsymbol{x_k})_i W_i+b_i}}{\sum_j e^{z(\boldsymbol{x_k})_j W_j+b_j}}$$
+
+The authors found that vector scaling had a tendency to perform slightly worse than TS as measured by a metric known as the Expected Calibration Error (Naeini et al., 2015).
 
 <div align="center">
 <img src="https://github.com/kundajelab/kundajelab.github.io/blob/master/_posts/2020-07-08-figure.png?raw=true" >
