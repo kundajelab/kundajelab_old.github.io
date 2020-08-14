@@ -39,7 +39,7 @@ $$p_t(y_i)^{(0)}=p_s(y_i)$$
 
 $$p_t(y_i \mid \boldsymbol{x_k} )^{(l)}=\frac{\frac{p_t(y_i)^{(l)}}{p_s(y_i)}p_s(y_i \mid \boldsymbol{x_k} )}{\sum_{j=1}^{n}\frac{p_t(y_j)^{(l)}}{p_s(y_j)}p_s(y_j \mid \boldsymbol{x_k} )}$$
 
-$$p_t(y_i)^{(l+1)}=\frac{1}{N}\sum_{k=1}{N}p_t(y_i \mid \boldsymbol{x_k} )^{(l)}$$
+$$p_t(y_i)^{(l+1)}=\frac{1}{N}\sum_{k=1}^{N} p_t(y_i \mid \boldsymbol{x_k} )^{(l)}$$
 
 where $$p_s(y_i)$$ is our estimate of the prior probability of observing class $$i$$ on the training set, $$p_t(y_i)^{(l)}$$ is the estimate in EM step $$l$$ of the prior probability of observing class $$i$$ on the testing set, $$p_s(y_i \mid \boldsymbol{x_k} )$$ is the conditional probability of observing class $$i$$ given features $$\boldsymbol{x_k}$$ on the training set, $$p_t(y_i \mid \boldsymbol{x_k} )^{(l)}$$ is the conditional probability in EM step $$l$$ of observing class $$i$$ given features $$\boldsymbol{x_k}$$ on the testing set, and $$N$$ is the number of examples in the testing set.
 
