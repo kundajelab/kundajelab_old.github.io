@@ -79,7 +79,7 @@ Our approach is as follows:
 <li>After estimating target-domain class proportions, compute the adapted predictions for the target domain similar to the E-step of EM.</li>
 </ul>
 
-This work demonstrates that the maximum likelihood with appropriate calibration is a formidable and efficient baseline for label shift adaptation. Follow up work by Garg et al. showed that our approach is indeed successful: "Across all shifts, MLLS (with BCTS-calibrated classifiers) uniformly dominates BBSE, RLLS, ..."
+This work demonstrates that the maximum likelihood with appropriate calibration is a formidable and efficient baseline for label shift adaptation. Follow up work by Garg et al. that studies why well calibrated maximum likelihood works well indepedently verified our findings: "Across all shifts, MLLS (with BCTS-calibrated classifiers) uniformly dominates BBSE, RLLS, ..."
 
 ## Summary & Additional Resources
 
@@ -100,5 +100,5 @@ A number of useful resources:
 <ul>
 <li>Paper: <a href="https://arxiv.org/abs/1901.06852">https://arxiv.org/abs/1901.06852</a></li>
 <li>Notebooks reproducing experiments: <a href="https://github.com/kundajelab/labelshiftexperiments">https://github.com/kundajelab/labelshiftexperiments</a></li>
-<li>Follow up work by Garg et al. that independently verifies our findings and establishes sufficient conditions for consistency of the maximum likelihood approach and derives finite-sample error bounds: <a href="https://arxiv.org/abs/2003.07554">https://arxiv.org/abs/2003.07554</a></li>
+<li>Follow up work by Garg et al. that establishes sufficient conditions for consistency of the maximum likelihood approach and derives finite-sample error bounds: <a href="https://arxiv.org/abs/2003.07554">https://arxiv.org/abs/2003.07554</a></li>
 </ul>
