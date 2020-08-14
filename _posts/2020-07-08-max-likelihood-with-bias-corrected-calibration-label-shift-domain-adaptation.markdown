@@ -75,9 +75,16 @@ Our approach is as follows:
 <ul>
 <li>Given a model that outputs predicted probabilities, calibrate the predictions of the model on a held-out validation using an appropriately strong calibration algorithm. We observed that BCTS and VS work well.</li>
 <li>Average the calibrated predictions over this held-out validation set to obtain the estimated source-domain class priors. This is a principled strategy for estimating source-domain priors improves robustness to poor calibration.</li>
-<li>Given samples from the target domain, use the estimated source-domain class priors and the calibrated predictor $p(y_i\mid\boldsymbol{x})$ to optimize the concave maximum likelihood objective mentioned above w.r.t. the estimated target-domain class proportions $p_t(y_i)$.</li>
+<li>Given samples from the target domain, use the estimated source-domain class priors and the calibrated predictor to optimize the concave maximum likelihood objective mentioned above w.r.t. the estimated target-domain class proportions.</li>
 <li>After estimating target-domain class proportions, compute the adapted predictions for the target domain similar to the E-step of EM.</li>
 </ul>
+
+The proposed approach results in great performance.
+
+<div align="center">
+<img src="https://github.com/kundajelab/kundajelab.github.io/blob/master/_posts/2020-07-08-figure.png?raw=true" >
+<p align="left"><em>Temperature Scaling exhibits systematic bias. On CIFAR10 data, systematic bias was quantified by the JS divergence between the true class label proportions and the average class predictions on a held-out test set drawn from the same distribution as the dataset used for calibration. TS: Temperature Scaling, NBVS: No-Bias Vector Scaling, BCTS: Bias-Corrected Temperature Scaling, VS: Vector Scaling. BCTS and VS had significantly lower systematic bias compared to TS and NBVS.</em></p>
+</div>
 
 This work demonstrates that the maximum likelihood with appropriate calibration is a formidable and efficient baseline for label shift adaptation. Follow up work by Garg et al. that studies why well-calibrated maximum likelihood is effective indepedently verified our findings: "Across all shifts, MLLS (with BCTS-calibrated classifiers) uniformly dominates BBSE, RLLS, ..."
 
