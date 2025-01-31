@@ -18,7 +18,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Our research focusses on development of statistical and machine learning methods for integrative analysis of diverse functional genomic and genetic data to learn models of gene regulation. We have led the analysis efforts of the Encyclopedia of DNA Elements (ENCODE) and The Roadmap Epigenomics Projects.
   
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://kundajelab.github.io # the base hostname & protocol for your site, e.g. http://example.com
+url: https://kundajelab_old.github.io # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: anshulkundaje
 github_username:  kundajelab
 disqus:
